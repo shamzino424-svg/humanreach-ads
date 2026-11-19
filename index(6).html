@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08131f">
+  <meta name="description" content="HumanReach Ads helps businesses create and share sponsored ad pages.">
+  <title>HumanReach Ads | Reach people, not noise</title>
+  <style>
+    :root{color-scheme:dark;--bg:#08131f;--panel:#102235;--line:#2a4055;--text:#f3f8fd;--muted:#a9bdcc;--mint:#60edce;--orange:#ffc174}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(ellipse at top right,#14364d 0%,var(--bg) 54%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+    .wrap{max-width:1000px;margin:auto;padding:0 19px}
+    header{border-bottom:1px solid var(--line);background:#08131fbb}
+    .head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 0}
+    .logo{font-size:18px;font-weight:850;letter-spacing:-.6px}.logo span{color:var(--mint)}
+    .tag{border:1px solid #427569;border-radius:30px;color:var(--mint);font-size:12px;padding:5px 10px}
+    .hero{padding:55px 0 30px}.eyebrow{color:var(--mint);font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+    h1{font-size:clamp(34px,7vw,64px);line-height:1.08;letter-spacing:-2px;margin:14px 0 20px;max-width:780px}
+    h1 em{font-style:normal;color:var(--mint)}
+    h2{font-size:25px;margin:0 0 9px}h3{font-size:19px;margin:0 0 8px}
+    p{margin:8px 0 17px;color:var(--muted)}.lead{font-size:18px;max-width:680px}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:20px 0 36px}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 30px #0002}
+    label{display:block;font-weight:700;font-size:13px;margin:16px 0 6px}
+    input,textarea,select{width:100%;font:inherit;border-radius:11px;border:1px solid #476075;background:#0a1b2a;color:var(--text);padding:12px 13px;outline-offset:3px}
+    textarea{resize:vertical;min-height:102px}input::placeholder,textarea::placeholder{color:#8299ac}
+    button,.button{display:inline-block;text-align:center;cursor:pointer;border:0;border-radius:11px;padding:13px 18px;font:800 15px system-ui;text-decoration:none;background:var(--mint);color:#05251f}
+    button:hover,.button:hover{filter:brightness(1.08)}.secondary{background:#20394c;color:#f3f8fd;border:1px solid #486478}
+    .full{width:100%;margin-top:20px}.small{font-size:13px}.note{color:var(--muted);font-size:13px}
+    .features{display:grid;gap:13px}.feature{border:1px solid var(--line);border-radius:14px;padding:17px;background:#0a1a2a}
+    .feature strong{display:block;color:var(--orange);margin-bottom:4px}
+    .adbox{background:linear-gradient(130deg,#1e4053,#102235);border:1px solid #426578;border-radius:22px;padding:30px;margin:16px 0 20px}
+    .sponsored{display:inline-block;border-radius:6px;border:1px solid #80a8b2;color:#d2e2e8;padding:4px 9px;font-size:12px;letter-spacing:.4px}
+    .brand{color:var(--mint);font-size:15px;font-weight:850;margin-top:23px;overflow-wrap:anywhere}
+    .adbox h2{font-size:clamp(28px,5vw,44px);letter-spacing:-1px;line-height:1.12;margin:11px 0}
+    .adbox p{color:#d8e8f1;font-size:18px;overflow-wrap:anywhere}
+    .chip{color:#b7d3dd;font-size:13px;margin:8px 0 18px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}.actions>*{flex:1}
+    .metrics{display:flex;gap:12px;flex-wrap:wrap}.metric{flex:1;min-width:120px;border:1px solid var(--line);border-radius:12px;padding:15px;background:#0a1a2a}
+    .metric b{font-size:25px;display:block;color:var(--mint)}.metric span{font-size:12px;color:var(--muted)}
+    .share{margin:18px 0;padding:17px;border-radius:13px;background:#0a1a2a;border:1px solid var(--line)}
+    .share input{margin:7px 0 10px}.footer{border-top:1px solid var(--line);padding:24px 0 35px;color:var(--muted);font-size:13px}
+    [hidden]{display:none!important}
+    @media(max-width:730px){.grid{grid-template-columns:1fr}.hero{padding-top:38px}.panel{padding:19px}.adbox{padding:22px}h1{letter-spacing:-1px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap head"><div class="logo">HUMAN<span>REACH</span> ADS</div><span class="tag">Early-access prototype</span></div></header>
+  <main class="wrap">
+    <section id="builder">
+      <div class="hero">
+        <div class="eyebrow">Ads built for meaningful attention</div>
+        <h1>Reach interested people.<br><em>Spot suspicious traffic.</em></h1>
+        <p class="lead">Build a branded sponsored ad, generate a shareable link, and start testing your message. No coding required.</p>
+      </div>
+      <div class="grid">
+        <div class="panel">
+          <h2>Create your ad</h2>
+          <p class="small">Enter your campaign details to make a public, shareable ad page.</p>
+          <form id="form">
+            <label for="brand">Company or brand</label>
+            <input id="brand" required maxlength="60" placeholder="Your company name">
+            <label for="headline">Ad headline</label>
+            <input id="headline" required maxlength="100" placeholder="A great reason to visit your business">
+            <label for="description">Ad message</label>
+            <textarea id="description" required maxlength="300" placeholder="What makes your offer valuable?"></textarea>
+            <label for="destination">Website visitors should open</label>
+            <input id="destination" required type="url" placeholder="https://yourwebsite.com" inputmode="url">
+            <label for="audience">Audience category</label>
+            <select id="audience">
+              <option>General interest</option><option>Home &amp; garden</option><option>Technology</option><option>Shopping</option><option>Food &amp; drink</option><option>Travel</option><option>Health &amp; wellness</option><option>Business services</option>
+            </select>
+            <label for="platform">Preferred advertising platform (planning only)</label>
+            <select id="platform"><option>Not selected</option><option>Google</option><option>Meta / Facebook</option><option>TikTok</option><option>Other</option></select>
+            <button class="full" type="submit">Create my shareable ad</button>
+          </form>
+        </div>
+        <aside class="features">
+          <div class="panel"><h3>What HumanReach Ads does today</h3><div class="features">
+            <div class="feature"><strong>01 · Build</strong>Create a sponsored ad with your brand, offer, and destination.</div>
+            <div class="feature"><strong>02 · Share</strong>Get a link that opens your ad on any device.</div>
+            <div class="feature"><strong>03 · Test</strong>Check the ad experience and local demo engagement counts.</div>
+          </div></div>
+          <div class="panel"><h3>Human traffic matters</h3><p class="small">Automated clicks can waste advertising budgets. Reliable bot screening requires server-side monitoring and verification. That is a future production feature—not something this prototype can guarantee.</p></div>
+        </aside>
+      </div>
+    </section>
+    <section id="ad-page" hidden>
+      <div class="hero"><div class="eyebrow">Sponsored campaign</div><h1>Discover an offer.</h1><p class="lead">This ad was created with HumanReach Ads.</p></div>
+      <article class="adbox">
+        <span class="sponsored">ADVERTISEMENT</span>
+        <div class="brand" id="ad-brand"></div>
+        <h2 id="ad-headline"></h2>
+        <p id="ad-description"></p>
+        <div class="chip" id="ad-audience"></div>
+        <a class="button" id="ad-visit" href="#" target="_blank" rel="noopener noreferrer">Visit advertiser website</a>
+      </article>
+      <div class="panel">
+        <h3>Share this ad</h3><p class="small">Anyone with the link can view the ad. Campaign details are included in the link.</p>
+        <div class="share"><label for="share-url">Your shareable link</label><input id="share-url" readonly aria-label="Shareable ad link"><button id="copy" type="button">Copy link</button><p id="copy-status" class="note" role="status"></p></div>
+        <h3>Engagement demo</h3><div class="metrics"><div class="metric"><b id="views">0</b><span>Views on this browser</span></div><div class="metric"><b id="clicks">0</b><span>Clicks on this browser</span></div></div>
+        <p class="note">These counters are stored only on this device. They are not global campaign analytics, verified human visits, or bot-fraud measurements.</p>
+        <button class="secondary" id="back" type="button">Create another ad</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">HumanReach Ads · Prototype. No ad purchases, platform algorithm changes, live bot verification, or advertiser account services are provided by this static website.</div></footer>
+  <script>
+    const $ = id => document.getElementById(id);
+    const builder = $('builder'), page = $('ad-page');
+    function cleanUrl(value) {
+      try { const u = new URL(value); return u.protocol === 'https:' ? u.href : null; }
+      catch { return null; }
+    }
+    function getAd() {
+      if (!location.hash.startsWith('#ad=')) return null;
+      try {
+        if (location.hash.length > 5000) return null;
+        const a = JSON.parse(decodeURIComponent(location.hash.slice(4)));
+        if (!a || ['brand','headline','description','audience'].some(k => typeof a[k] !== 'string') || !cleanUrl(a.url)) return null;
+        return a;
+      } catch { return null; }
+    }
+    function keyFor(ad) { return 'hr-stats:' + encodeURIComponent(JSON.stringify(ad)).slice(0, 1800); }
+    function readStats(key) {
+      try { const s = JSON.parse(localStorage.getItem(key) || '{}'); return {views: Number(s.views)||0, clicks:Number(s.clicks)||0}; }
+      catch { return {views:0,clicks:0}; }
+    }
+    function saveStats(key,s) { try { localStorage.setItem(key,JSON.stringify(s)); } catch {} }
+    let activeKey = null;
+    function render() {
+      const ad = getAd();
+      builder.hidden = !!ad; page.hidden = !ad;
+      if (!ad) { activeKey = null; return; }
+      $('ad-brand').textContent = ad.brand.slice(0,60);
+      $('ad-headline').textContent = ad.headline.slice(0,100);
+      $('ad-description').textContent = ad.description.slice(0,300);
+      $('ad-audience').textContent = 'Audience: ' + ad.audience.slice(0,60);
+      $('ad-visit').href = cleanUrl(ad.url);
+      $('share-url').value = location.href;
+      $('copy-status').textContent = '';
+      const key = keyFor(ad), s = readStats(key);
+      if (activeKey !== key) { s.views++; saveStats(key,s); }
+      activeKey = key;
+      $('views').textContent = s.views;
+      $('clicks').textContent = s.clicks;
+      window.scrollTo(0,0);
+    }
+    $('form').addEventListener('submit', e => {
+      e.preventDefault();
+      const url = cleanUrl($('destination').value.trim());
+      if (!url) { alert('Please enter a full HTTPS website address (https://...).'); return; }
+      const ad = {
+        brand:$('brand').value.trim(),headline:$('headline').value.trim(),
+        description:$('description').value.trim(),url,
+        audience:$('audience').value, platform:$('platform').value
+      };
+      if (!ad.brand || !ad.headline || !ad.description) return;
+      location.hash = 'ad=' + encodeURIComponent(JSON.stringify(ad));
+      render();
+    });
+    $('ad-visit').addEventListener('click', () => {
+      if (!activeKey) return;
+      const s = readStats(activeKey); s.clicks++; saveStats(activeKey,s);
+      $('clicks').textContent = s.clicks;
+    });
+    $('copy').addEventListener('click', async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText($('share-url').value);
+        else { $('share-url').select(); if (!document.execCommand('copy')) throw new Error('copy failed'); }
+        $('copy-status').textContent = 'Link copied! You can now share it.';
+      } catch { $('copy-status').textContent = 'Select the link above and use your phone’s Copy option.'; }
+    });
+    $('back').addEventListener('click', () => { history.pushState(null,'',location.pathname + location.search); render(); });
+    window.addEventListener('hashchange',render);
+    window.addEventListener('popstate',render);
+    render();
+  </script>
+</body>
+</html>
